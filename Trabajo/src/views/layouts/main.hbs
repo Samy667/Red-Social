@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    {{>head}}
+  </head>
+  <body>
+    {{>navigation}}
+
+    <div class="container p-4">
+      <div class="row">
+        <div class="col-md-8">
+          {{{ body  }}} 
+        </div>
+        <div class="col-md-4">
+          {{>stats this}}
+          {{>popular this}}
+          {{>comments this}}
+        </div>
+      </div>
+    </div>
+<!--CDN Bootstrap js-->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ka7S0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5+8nbTov4+1p"
+  crossorigin="anonymous"
+></script>
+<!--CDN jQuery-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- CDN Firebase-->
+<script defer src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white">
+      <div class="container p-2">
+        <div class="row">
+          <div class="mx-auto text-center">
+            <p>
+              <i class="fab fa-twitter-square fa-2x"></i>
+              <i class="fab fa-facebook-square fa-2x"></i>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    {{>footer}}
+    <script src="src/public/js/scripts.js"></script>
+  </body>
+</html>
